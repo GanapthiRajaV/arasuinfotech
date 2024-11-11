@@ -13352,6 +13352,200 @@ button.contact_form_submit {
     padding: 10px;
 }
 
+
+/* Gallery Pages */
+
+.fancybox-button--share{
+    display: none;
+}
+@keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+.hover-gallery {
+    transform: translate3d(0, 0, 0);
+    padding: 20px 25px;
+    min-height: 510px;
+    text-align: center;
+  }
+  
+  .gallery-container {
+    padding: 0;
+    margin: 0;
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
+  }
+  
+  .gallery-wrap {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 510px;
+  }
+  
+  .galery-item {
+    flex: 1;
+    height: 450px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+    transition: flex 0.8s ease;
+    transition-delay: 0.25s;
+  }
+  
+  .galery-item:hover {
+    flex: 14;
+  }
+  
+  .galery-item p {
+    position: absolute;
+    top: 0;
+    margin: 2rem;
+    padding: 1rem;
+    display: none;
+    color: #fff;
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
+  }
+  
+  .galery-item:hover p {
+    display: block;
+    animation: fade-in 2.5s ease;
+  }
+
+
+  .portfolio-section {
+    background: #f6f6f6;
+    padding: 110px 0 108px;
+  }
+  .portfolio-section h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  .portfolio-menu {
+    text-align: center;
+  }
+  .control {
+    background: #000;
+    color: #fff;
+    padding: 5px 10px;
+    border: 1px solid #343a40;
+    border-radius: 3px;
+    margin: 5px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+  .control:hover {
+    background: #343a40;
+  }
+  .mixitup-control-active {
+    color: #fff;
+    background: #343a40;
+  }
+  .fancybox-container button:focus {
+    outline: 0;
+    box-shadow: none;
+  }
+  .portfolio-item {
+    padding-top: 30px;
+  }
+  .pd {
+    padding: 0;
+    padding: 10px;
+  }
+  .pd img {
+    height: 180px;
+    transition: all 0.5s;
+  }
+  .portfolio-overlay {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    visibility: hidden;
+    transition: all 0.5s;
+    transform: scale(0);
+  }
+  .portfolio-overlay p,
+  .portfolio-overlay a {
+    position: relative;
+    z-index: 4;
+  }
+  .portfolio-overlay::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-width: 0;
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    transition: 50ms height ease 150ms;
+    z-index: 3;
+  }
+  .portfolio-overlay::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-width: 0;
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+    transition: 100ms width ease 200ms;
+    z-index: 3;
+  }
+  .portfolio-item:hover .portfolio-overlay::before {
+    width: 80%;
+    height: 80%;
+    border-top: 1px solid #50977f;
+    border-right: 1px solid #50977f;
+    transition: width 0.1s ease 0.3s, height 0.1s ease 0.5s;
+  }
+  .portfolio-item:hover .portfolio-overlay::after {
+    width: 80%;
+    height: 80%;
+    border-bottom: 1px solid #50977f;
+    border-left: 1px solid #50977f;
+    transition: width 0.1s ease 0.6s, height 0.1s ease 0.7s;
+  }
+  .portfolio-item li:hover .portfolio-overlay {
+    visibility: visible;
+    transform: scale(1);
+  }
+  .portfolio-overlay .category {
+    margin-top: 70px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+  }
+  .portfolio-overlay .magnify-icon {
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    background: #50977f;
+    margin: 0 5px;
+    cursor: pointer;
+    display: inline-block;
+    transition: all 0.25s;
+  }
+  .portfolio-overlay .magnify-icon:hover {
+    background: #000;
+  }
+  .portfolio-overlay .magnify-icon p span i {
+    font-size: 15px;
+    color: #fff;
+    line-height: 40px;
+    cursor: pointer;
+  }
+  
 @media (min-width: 320px) and (max-width: 480px){
     .sec-title .title {
         font-size: 12px;
@@ -13422,7 +13616,14 @@ button.contact_form_submit {
         margin-top: 75px;
         padding: 0;
      }
-
+     /* Gallary */
+     .galery-item {
+        height: 345px;
+     }
+     .pd img {
+        height: inherit;
+        width: 100%;
+    }
      /* Contact */
      .contact_field {
         padding: 35px 30px 35px 30px;
