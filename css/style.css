@@ -13450,7 +13450,37 @@ button.contact_form_submit {
     }
 }
 
-
+.top-servsec {
+    background: #f6f6f6;
+}
+.serv-card-part {
+    text-align: center;
+    background: #c5cadd1c;
+    padding: 10px 5px;
+    border-radius: 20px;
+    border-top: 5px solid red;
+    margin: 15px 0;
+    transition: all 0.5s ease-in;
+    height: 400px;
+}
+.serv-card-part:hover{
+    background-color: #dfddddcc;
+    border-top: 5px solid #000;
+}
+.serv-card-part img {
+    width: 100px;
+    padding: 10px;
+    text-align: center;
+}
+.serv-card-part h3 {
+    font-size: 22px;
+    padding: 15px 0;
+    text-align: center;
+}
+.serv-card-part p{
+    font-size: 16px;
+    text-align: justify; 
+}
 /* Gallery Pages */
 
 .fancybox-button--share{
